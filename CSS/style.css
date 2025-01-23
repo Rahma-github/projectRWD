@@ -1,0 +1,176 @@
+
+        .bg-image {
+         background: url('../image/back.webp') no-repeat center center / cover;
+          
+          position: relative;
+        }
+      
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.4); 
+          z-index: 1;
+        }
+      
+        .content {
+          position: relative;
+          z-index: 2;
+        }
+.search-icon {
+  position: absolute;
+  left: 10px; 
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+input.form-control {
+  padding-left: 35px; 
+  position: relative;
+  z-index: 1;
+}
+
+.search-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.search-text {
+  position: absolute;
+  right: 17%;
+  bottom: 10px;
+  font-size: 0.9rem;
+  color: #afacac;
+  z-index: 1;
+}
+/* ------------- ------------------------- */
+
+.btn-circle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid whitesmoke; 
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  animation: moveUpDown 2s ease-in-out infinite; 
+}
+
+.arrow-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: rgba(255, 255, 255, 0.6);
+  transition: fill 0.3s ease; 
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(200px); 
+  }
+  50% {
+    transform: translateY(250px); 
+  }
+  100% {
+    transform: translateY(200px); 
+  }
+}
+
+
+.arrow-btn-container {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  z-index: 2;
+}
+
+
+/* ------------- sec3 ==> movement----------------- */
+
+.carousel-item {
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+
+/* ----------  SEC4 ---------------- */
+#carouselExampleIndicators {
+  height: 500px; 
+  position: relative;
+}
+.carousel-item img {
+  max-height: 400px; 
+  object-fit: cover; 
+}
+
+.carousel-indicators .active {
+  background-color: #007bff; 
+}
+
+/* ----------------------------------- */
+/* ------------------- change nav color---------------- */
+
+.navbar {
+  background-color: transparent !important; 
+  transition: background-color 0.3s ease; 
+}
+
+.navbar .navbar-brand, 
+.navbar .nav-link {
+  color: white !important; 
+}
+
+.navbar.scrolled {
+  background-color: white !important; 
+  color: black; 
+}
+
+.navbar.scrolled .navbar-brand, 
+.navbar.scrolled .nav-link  {
+  color: black !important; 
+}
+
+.navbar.scrolled .navbar-toggler-icon {
+  background-color: black; 
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar.scrolled .btn.bg-transparent, 
+.navbar.scrolled .btn.border-light-subtle ,.navbar.scrolled .dash {
+  color: rgb(3, 3, 3) !important;
+}
+
+
+.navbar .nav-link:hover,.navbar .dash:hover, .navbar-brand:hover  {
+  color:#007bff !important;  
+}
+
+.navbar.scrolled .nav-link:hover ,.navbar.scrolled .dash:hover,.navbar.scrolled  .navbar-brand:hover  {
+  color: #007bff !important;  
+}
+
+/* ---------- hove text decoration-------------------- */
+.hoverFooter:hover {
+  text-decoration: underline !important;
+}
+
+ /* ---------- hove header-------------------- */
+
+ .btn-hover:hover{
+  border-color: #007bff !important;
+}
+.hoverTextDecoration:hover{
+  text-decoration:underline;
+  color: #007bff;
+}
