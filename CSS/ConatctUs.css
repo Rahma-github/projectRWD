@@ -1,0 +1,59 @@
+
+:root{
+    --primarycolor: rgb(92, 149, 220);
+    --secondcolor: #1877F2;
+}
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 115vh;
+            width: 100%;
+            margin: 0;
+        }
+        .contactus_form {
+            padding: 30px;
+            border-radius: 15px;
+            width: 100%;
+        }
+        #color_text {
+            color: gray;
+        }
+        #submitbtn {
+            background-color:var(--primarycolor);
+        }
+        .l_shadow {
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .facebook_icon_color i{
+            color:var(--secondcolor);
+        }
+        .twiter_icon_color i{
+            color:var(--primarycolor);
+        }
+        .linkdin_icon_color i{
+            color:var(--primarycolor);
+        }
+        
+        .youtube_icon_color i{
+            color: #FF0000;
+        }
+        .icons a {
+        font-size: 1.7rem; 
+    }
+    .icons a::after {
+    content: ""; 
+}
+    .textstyle p{
+       color: white;
+    }
+  a {
+    text-decoration: none; 
+    
+  }
+  a:hover {
+    text-decoration: underline; 
+  }
+   
