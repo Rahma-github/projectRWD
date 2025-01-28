@@ -1,0 +1,63 @@
+body {
+  background-color: rgb(245, 246, 247) !important;
+}
+
+#noSavedJobs h1, #noSavedJobs p {
+  color: rgb(77, 97, 130);
+  opacity: 0.6;
+}
+
+#savedJobsContainer > div {
+  background-color: white;
+  border-bottom: 1px solid rgb(217, 221, 228);
+  box-shadow: 1px 1px 5px 0px rgba(168, 168, 168, 0.05), -1px -1px 5px 0px rgba(168, 168, 168, 0.05);
+}
+
+.bglight, .active {
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.active {
+  border-bottom: 0 !important;
+  color: #0055d9;
+  opacity: 1 !important;
+}
+
+.bdg {
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: italic;
+  text-decoration: none;
+  line-height: 14px;
+  display: inline-block;
+  padding: 4px;
+  border: 0px;
+  background-color: #ebedf0;
+  color: rgb(89, 108, 138);
+}
+
+.title {
+  color: #0055d9;
+  font-size: 14px !important;
+}
+
+.cursur, .action {
+  cursor: pointer;
+}
+
+.companyName, .skills, .companyLocation {
+  font-size: 12px !important;
+}
+
+.skills {
+  opacity: 0.6;
+}
+
+.card i {
+  font-size: 12px;
+}
+
+.action:hover {
+  background-color: #ebedf0;
+}/*# sourceMappingURL=saved.css.map */

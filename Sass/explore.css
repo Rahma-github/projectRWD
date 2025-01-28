@@ -1,0 +1,138 @@
+.border {
+  border: 1px solid rgba(0, 0, 0, 0.175);
+  border-radius: 4px 4px 0px 0px;
+}
+
+.bglight, .addlink:hover, .active {
+  background-color: rgb(255, 255, 255) !important;
+}
+
+body {
+  background-color: #f5f6f7 !important;
+}
+
+.cursur, .action {
+  cursor: pointer;
+}
+
+#outside, #recommend {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.active {
+  border-bottom: 0 !important;
+  color: #0055d9;
+  opacity: 1 !important;
+}
+
+.title {
+  color: #0055d9;
+  font-size: 14px !important;
+}
+
+.bdg {
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: italic;
+  text-decoration: none;
+  line-height: 14px;
+  display: inline-block;
+  padding: 4px;
+  border: 0px;
+  background-color: #ebedf0;
+  color: rgb(89, 108, 138);
+}
+
+.companyName, .skills, .companyLocation {
+  font-size: 12px !important;
+}
+
+.skills {
+  opacity: 0.6;
+}
+
+.card i {
+  font-size: 10px;
+}
+
+.action:hover {
+  background-color: #ebedf0;
+}
+
+.bio {
+  font-size: 12px;
+}
+
+.Introductory {
+  border-radius: 4px;
+  border: 1px solid rgb(217, 221, 228);
+  padding: 24px;
+  background: linear-gradient(0deg, rgb(255, 255, 255) 38.5%, rgb(242, 241, 250) 80.5%, rgb(232, 229, 245) 100%);
+}
+
+.btnView {
+  height: 24px;
+  border: 1px solid rgb(25, 85, 60);
+  color: rgb(25, 85, 60);
+  background-color: rgb(224, 242, 235);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.intro {
+  font-size: 12px;
+}
+
+.addlink {
+  color: #0055d9;
+  transition: all 0.5s;
+}
+.addlink:hover {
+  background-color: #0055d9;
+}
+
+#outsideEgyptContent > P {
+  letter-spacing: -0.6px;
+  line-height: 34px;
+  color: rgb(77, 97, 130);
+  margin: 10px 0;
+}
+
+.share {
+  color: rgb(77, 97, 130);
+  font-family: "Open Sans";
+  font-size: 14px;
+  margin: 0px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.dialog1 {
+  z-index: 999999;
+  background-color: rgb(255, 255, 255) !important;
+  border: 1px solid rgb(235, 237, 240);
+  border-radius: 2px;
+  padding: 12px;
+  display: none;
+  bottom: -65%;
+  left: 2%;
+  transition: all 0.3s linear;
+  animation: animateDialog 0.3s linear 0s;
+}
+
+@keyframes animateDialog {
+  0% {
+    bottom: -100%;
+    opacity: 0;
+  }
+  50% {
+    bottom: -80%;
+    opacity: 0.1;
+  }
+  100% {
+    bottom: -65%;
+    opacity: 1;
+  }
+}/*# sourceMappingURL=explore.css.map */

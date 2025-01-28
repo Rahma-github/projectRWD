@@ -1,0 +1,75 @@
+$textColorLowOpacity:  rgb(77, 97, 130);
+$white: rgb(255 255 255) !important;
+$bimary-cOLOR:#0055d9;
+$bgcolorGray: #ebedf0;
+
+body{
+    background-color: rgb(245, 246, 247) !important;
+    // background-color: red;
+}
+#noSavedJobs{
+    h1,p{
+        color: $textColorLowOpacity;
+        opacity: 0.6;
+    }
+}
+#savedJobsContainer>div{
+    background-color: white;
+    border-bottom: 1px solid rgb(217, 221, 228);
+    box-shadow: 1px 1px 5px 0px rgba(168, 168, 168, 0.05), -1px -1px 5px 0px rgba(168, 168, 168, 0.05);
+}
+
+.bglight{
+    background-color: $white;
+}
+.active{
+    @extend .bglight;
+    border-bottom: 0 !important;
+    color: $bimary-cOLOR;
+    opacity: 1 !important;
+}
+
+.bdg{
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: italic;
+    text-decoration: none;
+    line-height: 14px;
+    display: inline-block;
+    padding: 4px;
+    border: 0px;
+    background-color: $bgcolorGray;
+    color: rgb(89, 108, 138);
+}
+.title{
+    color: $bimary-cOLOR;
+    font-size: 14px !important;
+}
+
+@mixin fontSise(){
+    font-size: 12px !important;
+}
+.cursur{
+    cursor: pointer;
+}
+
+.companyName,.companyLocation{
+   @include fontSise();
+}
+.skills{
+    @extend .companyName;
+    opacity: 0.6;
+}
+
+.card{
+    i{
+       font-size: 12px;
+    }
+   }
+.action{
+       @extend .cursur;
+       &:hover{
+          background-color:$bgcolorGray;
+       }
+}

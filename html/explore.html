@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WUZZUF</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../Sass/explore.css">
+    <link rel="icon" type="image/x-icon" href="../image/favicon.ico">
+</head>
+<body>
+    <div class="container mt-5 p-0">
+        <h1 class="mb-4 fs-6  fw-bolder">Explore New Career Opportunities</h1>
+        <div class="row d-flex justify-content-between">
+            <div class="col-lg-8 col-12 border p-0 ">
+                <div class="row  m-auto mb-0">
+                    <h2 class="d-flex align-items-center gap-2  fw-bold  col-md-3 col-6 m-0 p-2 border-end border-bottom cursur active " id="recommend"  data-bs-toggle="collapse"  data-bs-target="#recommendedContent" aria-expanded="true" aria-controls="recommendedContent">
+                        <img src="../image//star.png" alt="star not found">
+                         Recommended
+                    </h2>
+                    <h2 class="d-inline-block fw-bold col-md-9 col-6  m-0   m-0 p-2  border-bottom cursur" id="outside"  data-bs-toggle="collapse" data-bs-target="#outsideEgyptContent" aria-expanded="true" aria-controls="outsideEgyptContent">Outside Egypt</h2>
+                </div>
+
+                
+                <div id="recommendedContent" class="collapse show">
+                   <div id="jobs-container"></div>
+                   <div id="placeholder"></div>
+                </div>
+
+                <div id="outsideEgyptContent" class="collapse  bglight text-center py-2 row   flex-column m-0 align-items-center h-100" >
+                    <img src="../image/outsideEgypt.png" alt="image outside egypt" class="img-fluid w-75">
+                    <p class="fs-5 fw-semibold  col-sm-8  col-lg-7  m-auto my-3" >Your profile preferences didn't match any jobs in the outside Egypt feed</p>
+                    <button class="btn btn-primary col-8 col-sm-10 col-md-5 rounded-0">Search for relavent jobs</button>
+                    <a href="#" class="link-underline  link-underline-opacity-0  my-3">Enhance your profile</a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 d-none d-lg-block">
+                <div class="col-11 mb-4">
+                    <div class="card  p-3">
+                      <div class="card-body">
+                         <div class="row align-items-center">
+                            <img src="../image/avatar girl.png" alt="Profile Picture" class="rounded-circle col-3 p-1"  >
+                            <div class="col-9 text-start">
+                                <h5 class="card-title my-2 fs-6">Nour Akram</h5>
+                                <p class="card-text bio">Front End Developer at Regional Information Technology Institute</p>
+                            </div>
+                         </div>
+                         <div class="text-start my-3">
+                          <h6 class="fs-6">Online Presence</h6>
+                          <div class="progress" style="height: 6px;">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <small class="text-muted d-block mt-2">The more the employer knows about you, the more chances you get</small>
+                        </div>
+                        <button class="btn border-primary text-primary w-50 addlink">Add Links</button>
+                      </div>
+                    </div>
+                </div>
+              
+                <div class="col-11">
+                    <div class="card text-center Introductory">
+                      <img src="https://static.wuzzuf-data.net/intro-videos-f-d3891ea3e979980f51806479b0f5eb65.png" class="card-img-top" alt="IntroductoryVideo">
+                      <div class="card-body">
+                        <button class="btnView d-flex align-items-center gap-2 m-auto mb-3 rounded">
+                            <i class="fa-solid fa-bolt"></i>
+                            <p class="m-0">5x more views!</p>
+                        </button>
+                        <h5 class="card-title fs-5">Stand Out with Introductory Videos!</h5>
+                        <p class="card-text intro">Introduce yourself to employers with a personalized video. Highlight your skills, experience, and unique qualities.</p>
+                        <button class="btn btn-primary d-flex align-items-center gap-2 m-auto rounded w-100 justify-content-center">
+                           <i class="fa-solid fa-video"></i>
+                           <p class="m-0">Try Now!</p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="../JS/explore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
