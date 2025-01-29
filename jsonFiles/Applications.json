@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "title": "Mid-Level Frontend Angular Developer",
+        "company": "RTR Software Solutions ",
+        "location": "Nasr City, Cairo",
+        "AppliedDate":"11 days ago",
+        "postedDate": "20 days ago",
+        "noOfApplicants":88,
+        "noOfViews":29,
+        "inConsideration":0,
+        "notSelected":0,
+        "QuestionsRequire":[
+            "What are your salary expectations?"
+        ],
+        "companyLogo": "https://images.wuzzuf-data.net/files/company_logo/64409687764b3b8a095513.png"
+    },
+    {
+        "id": 2,
+        "title": "PHP Laravel and PHP Native Developer",
+        "company": "Epic Systems",
+        "location": " Zamalek, Cairo",
+        "AppliedDate":"11 days ago",
+        "postedDate": "13 days ago",
+        "noOfApplicants":129,
+        "noOfViews":49,
+        "inConsideration":22,
+        "notSelected":24,
+        "QuestionsRequire":[
+            "What makes you the ideal candidate for this position?"
+        ],
+        "companyLogo": "https://images.wuzzuf-data.net/files/company_logo/Epic-Systems-Egypt-14989-1450565071.png"
+    },
+    {
+        "id": 3,
+        "title": "Frontend Developer - Fully Remote Job",
+        "company": "Osus Group",
+        "location": "Cairo, Egypt",
+        "AppliedDate":"12 days ago",
+        "postedDate": "1 month ago",
+        "noOfApplicants":197,
+        "noOfViews":51,
+        "inConsideration":20,
+        "notSelected":20,
+        "QuestionsRequire":[
+            "Give me an example of a time you made a process more efficient. How did you do it?",
+            "How do you ensure that you remain productive and motivated when working remotely, especially when faced with distractions or a lack of direct supervision?",
+            "What is your current salary?",
+            "Are you willing to start immediately?",
+            "What makes you the ideal candidate for this position?",
+            "Why do you want to join our company?"
+        ],
+        "companyLogo": "https://images.wuzzuf-data.net/files/company_logo/108132290665b78d980a198.png"
+    },
+    {
+        "id": 4,
+        "title": "ERP System Analyst",
+        "company": "Xceed Contact Center ",
+        "location": "Maadi, Cairo",
+        "AppliedDate":"12 days ago",
+        "postedDate": "16 days ago",
+        "noOfApplicants":169,
+        "noOfViews":15,
+        "inConsideration":0,
+        "notSelected":0,
+        "QuestionsRequire":[
+            "What makes you the ideal candidate for this position?"
+        ],
+        "companyLogo": "https://images.wuzzuf-data.net/files/company_logo/Xceed-Contact-Center-Egypt-52679-1599402164.png"
+    }
+    
+]

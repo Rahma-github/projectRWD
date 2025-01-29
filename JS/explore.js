@@ -111,9 +111,7 @@ function renderJobs(jobs) {
 
     currentJobIndex += jobsPerPage; 
     placeholderContainer.innerHTML = "";
-    isLoading = false; 
-
-    
+    isLoading = false;    
 }
 
 function renderPlaceholder(container) {
@@ -162,8 +160,8 @@ let saveJobs = JSON.parse(localStorage.getItem("saveJobs")) || [];
 
 jobscontainer.addEventListener("click", function (e) {
     if (e.target.closest(".action") && e.target.closest(".action").id === "save") {
-        const saveButton = e.target.closest(".action");
-        const index = saveButton.getAttribute("data-index");
+        const saveContainer = e.target.closest(".action");
+        const index = saveContainer.getAttribute("data-index");
 
         const currentJob = jobsJson.find((job) => job.id == index);
 
@@ -171,15 +169,15 @@ jobscontainer.addEventListener("click", function (e) {
 
         if (jobExists) {
             saveJobs = saveJobs.filter((job) => job.id != currentJob.id);
-            saveButton.classList.remove("active");
-            saveButton.querySelector(".savedIcon").classList.remove("fa-solid");
-            saveButton.querySelector(".savedIcon").classList.add("fa-regular");
+            saveContainer.classList.remove("active");
+            saveContainer.querySelector(".savedIcon").classList.remove("fa-solid");
+            saveContainer.querySelector(".savedIcon").classList.add("fa-regular");
            
         } else {
             saveJobs.push(currentJob);
-            saveButton.classList.add("active"); 
-            saveButton.querySelector(".savedIcon").classList.remove("fa-regular");
-            saveButton.querySelector(".savedIcon").classList.add("fa-solid");
+            saveContainer.classList.add("active"); 
+            saveContainer.querySelector(".savedIcon").classList.remove("fa-regular");
+            saveContainer.querySelector(".savedIcon").classList.add("fa-solid");
           
         }
         localStorage.setItem("saveJobs", JSON.stringify(saveJobs));
@@ -235,7 +233,8 @@ document.addEventListener("click", function (e) {
         const allDialogs = document.querySelectorAll(".dialog1");
         allDialogs.forEach((dialog) => {
             dialog.style.display = "none";
-            sharecontainer.classList.remove("active");
+            if( sharecontainer)
+                sharecontainer.classList.remove("active");
         });
     }
 });

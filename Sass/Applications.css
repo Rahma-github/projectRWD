@@ -1,0 +1,123 @@
+body {
+  background-color: #f5f6f7 !important;
+}
+
+.cursur {
+  cursor: pointer;
+}
+
+select {
+  outline: none !important;
+  box-shadow: none !important;
+}
+select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.videoProfile {
+  background: linear-gradient(270deg, rgb(232, 229, 245) 0%, rgb(242, 241, 250) 23%, rgb(255, 255, 255) 79.5%);
+  border: 1px solid rgb(217, 221, 228);
+}
+
+.company {
+  font-size: 12px;
+}
+
+.card {
+  border: 1px solid rgb(217, 221, 228);
+  transition: all 0.3s linear;
+}
+.card:hover {
+  box-shadow: 1px 1px 5px rgb(207, 207, 207), 0px 0px 5px rgb(207, 207, 207);
+}
+
+.card.active {
+  box-shadow: rgb(204, 224, 255) 0px 0px 0px 3px;
+  border: 1px solid #0055d9;
+  position: relative;
+}
+
+.card.active::before {
+  content: "";
+  position: absolute;
+  right: -14px;
+  top: 18px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 13px 0 13px 13px;
+  border-color: transparent transparent transparent rgb(204, 224, 255);
+}
+
+.card.active::after {
+  content: "";
+  position: absolute;
+  right: -8px;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.application-details {
+  z-index: 1000;
+  top: 0;
+  right: -81% !important;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 3px 3px -2px, rgba(0, 0, 0, 0.2) 0px 1px 8px 0px;
+}
+.application-details .posted {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .application-details {
+    z-index: 1000;
+    position: fixed !important;
+    top: 0;
+    right: 0 !important;
+    width: 100% !important;
+    height: 100vh;
+  }
+}
+.text {
+  font-size: 14px;
+}
+
+textarea, input {
+  outline: none !important;
+  box-shadow: none !important;
+  resize: none;
+}
+textarea:focus, input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.WithdrawArchive {
+  top: 30%;
+  right: -40%;
+  z-index: 3000;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 3px 3px -2px, rgba(0, 0, 0, 0.2) 0px 1px 8px 0px;
+}
+
+.WithdrawArchive > div:hover {
+  background-color: rgb(227, 234, 246);
+}
+
+.WithdrawArchive > div.diabled {
+  background-color: transparent;
+  color: rgb(77, 97, 130);
+  cursor: not-allowed;
+}
+
+.text2 {
+  color: rgb(77, 97, 130);
+}
+
+.dialog1::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}/*# sourceMappingURL=Applications.css.map */
