@@ -24,6 +24,7 @@
 
   .carousel-item {
     transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    
   }
   .carousel-indicators .active {
     background-color: #007bff; 
