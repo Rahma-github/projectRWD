@@ -1,7 +1,8 @@
 let ApplicationsContainer =document.getElementById("ApplicationsContainer");
 let ApplicationDetails =document.getElementById("ApplicationDetails");
 let  ApplicationsJson=[];
-let noApp=document.getElementById("noApp")
+let noApp=document.getElementById("noApp");
+let overlay =document.getElementsByClassName("overlay")[0];
 async function fetchApplication() {
     try {
         let response = await fetch("../jsonFiles/Applications.json"); 
@@ -118,7 +119,7 @@ function renderApplications(Applications) {
     });
 
 
-
+        ///////////////////////////////////////////////////////////////////////
         let menuIcon = appCard.querySelector(".menu-icon");
         let withdrawArchive = appCard.querySelector(".WithdrawArchive");
 
@@ -219,10 +220,10 @@ function renderApplications(Applications) {
 
       ApplicationsContainer.appendChild(appCard);
 
-    //   if(index===0){
-    //     appCard.classList.add("active");
-    //     showApplicationDetails(app, appCard);
-    //   }
+      if(index===0){
+        appCard.classList.add("active");
+        showApplicationDetails(app, appCard);
+      }
     });
 
 }
@@ -240,61 +241,65 @@ fetchApplication();
 
 function showApplicationDetails(app, appCard) {
     let detailsDiv = document.createElement("div");
-    detailsDiv.className = "application-details position-absolute   bg-white  p-1 rounded-1 w-75";
+    detailsDiv.className = "application-details   bg-white  p-lg-1 p-0 rounded-1 w-75 ";
     
 
     detailsDiv.innerHTML = `
-        <div class=" p-2 border-0">
-            <header class="d-flex justify-content-between align-items-center">
-                <p class="m-0">Application Preview</p>
+        <div class=" p-lg-2 p-0 border-0">
+            <header class="d-flex justify-content-between align-items-center d-flex d-lg-none  bg-primary text-light p-3  mb-2  w-100">
+               <div class="d-flex align-items-center gap-2 col-10">
+                  <i class="fa-solid fa-eye"  ></i>
+                  <p class="m-0 fw-semibold">Application Preview</p>
+               </div>
+               <i class="fa-solid fa-x col-2 d-flex justify-content-end " id="closeDetails"></i>
             </header>
-            <h4 class="fw-bold fs-4 text-primary">${app.title}</h4>
-            <div class="d-flex text mb-1">
+            <h4 class="fw-bold fs-4 text-primary px-2">${app.title}</h4>
+            <div class="d-flex text mb-1 px-2">
                <p class="text-dark fw-semibold m-0">${app.company} - </p>
                <p class="text-secondary fw-semibold m-0"> ${app.location}</p>
             </div>
-            <p class="m-0 text-secondary posted">Posted ${app.postedDate}</p>
+            <p class="m-0 text-secondary px-2 posted">Posted ${app.postedDate}</p>
            
-            <div class="alert alert-danger p-1 ps-3  rounded-1 my-4 d-flex align-items-center gap-2" role="alert">
+            <div class="alert alert-danger p-1 ps-3  rounded-1 my-4 mx-3 d-flex align-items-center gap-2" role="alert">
                <i class="fa-solid fa-bars-staggered" style="font-size:12px"></i>
                <p class=" m-0" style="font-size:12px">Your profile ranks low among other applicants</p>
             </div>
 
-            <div class="d-flex row">
-              <div class="d-flex flex-column col-xl-2 col-md-2  align-items-center">
+            <div class="d-flex row mx-2">
+              <div class="d-flex flex-column col-lg-2 col-md-1 col-sm-1 col-1 align-items-center">
                  <p class="m-0 text-secondary fw-bold fs-6">${app.noOfApplicants}</p>
                  <p class="m-0" style="font-size:12px">Applicants</p>
               </div>
-              <div class="d-flex flex-column col-xl-1 col-md-2 align-items-center">
+              <div class="d-flex flex-column col-lg-1 col-md-1 col-sm-2 col-2 align-items-center">
                  <p class="m-0 text-secondary fw-bold fs-6">${app.noOfViews}</p>
                  <p class="m-0" style="font-size:12px">Views</p>
               </div>
-              <div class="d-flex flex-column col-xl-3 col-md-4  align-items-center justify-content-center  border-start border-secondary-subtle border-1 ">
+              <div class="d-flex flex-column col-lg-4 col-md-2 col-sm-3 col-4 align-items-center justify-content-center  border-start border-secondary-subtle border-1 ">
                  <p class="m-0 text-secondary fw-bold fs-6">${app.inConsideration}</p>
                  <p class="m-0 text-success" style="font-size:12px">In Consideration</p>
               </div>
-              <div class="d-flex flex-column col-xl-3 col-md-3 align-items-center justify-content-center border-start border-secondary-subtle border-1">
+              <div class="d-flex flex-column col-lg-4 col-md-2  col-sm-2 col-4 align-items-center justify-content-center border-start border-secondary-subtle border-1">
                  <p class="m-0 text-secondary fw-bold fs-6">${app.notSelected}</p>
                  <p class="m-0 text-danger" style="font-size:12px">Not Selected</p>
               </div>
             </div>
 
-            <div class="d-flex align-items-center justify-content-between my-3"> 
+            <div class="d-flex align-items-center justify-content-between my-3 px-2"> 
               <p class="m-0 fs-6 fw-semibold text-dark">Screening questions</p>
               <p class="m-0 fs-6 fw-semibold text-dark">${app.QuestionsRequire.length}</p>
             </div>
             <div>
             ${app.QuestionsRequire.map((q) => `
-                <div class="question col-12">
+                <div class="question col-12 px-2">
                     <div class="d-flex align-items-start justify-content-between">
                         <p class=" fw-semibold text m-0 col-xl-8 col-md-8" >${q}</p>
-                        <div class="d-flex align-items-center gap-2  justify-content-center text-primary col-xl-3 col-md-4 ">
+                        <div class="d-flex align-items-center gap-2  justify-content-end text-primary col-lg-4 col-md-3 ">
                            <i class="fa-solid fa-pen" style="font-size:12px"></i>
                            <p class="m-0 text">Edit Answers</p>
                         </div>
                     </div>
                 </div>
-                 <div class="mt-1 mb-4">
+                 <div class="mt-1 mb-4 px-2">
                       ${q.trim().toLowerCase().startsWith("are") ? `
                         <div class="d-flex gap-3">
                           <label class="d-flex align-items-center gap-1">
@@ -313,5 +318,55 @@ function showApplicationDetails(app, appCard) {
         </div>
     `;
 
+
     appCard.appendChild(detailsDiv);
+    if(!overlay){
+      overlay = document.createElement('div');
+      overlay.className = 'overlay';
+      
+      document.body.appendChild(overlay); 
+    }else{
+      overlay.classList.remove("none")
+    }
 }
+////////////////////////////////
+document.addEventListener("DOMContentLoaded",()=>{
+ if(overlay){
+  overlay.addEventListener("click", function () {
+    detailsDiv.remove();
+    overlay.classList.add("none")
+    appCard.classList.remove("active");
+  });
+ }
+})
+///////////////////////////close details app ///////////////////////////////////////////////////////////
+document.addEventListener("click", function (event) {
+  let activeCard = document.querySelector(".card.active");
+  if (event.target.closest('#closeDetails')) {
+      let details = activeCard.querySelector(".application-details");
+      if (details) {
+          details.remove();  
+      }
+      if(overlay){
+        overlay.classList.add("none")
+      }
+      activeCard.classList.remove("active");
+      
+  }
+});
+
+
+///////////////////////////////show dropdown menu////////////////////////////////////////////////////////////
+
+let menu =document.getElementById("menu");
+let dropmenu=document.getElementsByClassName("dropmenu")[0];
+menu.addEventListener("click",()=>{
+  dropmenu.classList.toggle("d-none")
+});
+
+document.addEventListener("click", (event) => {
+  if (!dropmenu.contains(event.target) && !menu.contains(event.target)) {
+      dropmenu.classList.add("d-none");
+  }
+});
+////////////////////////////////////////////////////////////////////////////////////////////////////////

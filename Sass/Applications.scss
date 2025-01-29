@@ -1,7 +1,8 @@
 $bimary-cOLOR:#0055d9;
 $white:white;
 $textColorLowOpacity:  rgb(77, 97, 130);
-
+$drowbackColor: rgba(0, 0, 0, 0.5);
+$borderColor:#e6e6e6;
 body{
     background-color: #f5f6f7 !important;
 }
@@ -65,15 +66,16 @@ select{
     height: 0;
     border-style: solid;
     border-width: 10px 0 10px 10px; 
-    border-color: transparent transparent transparent white; 
+    border-color: transparent transparent transparent $white; 
 }
 
 
 
 .application-details{
     z-index: 1000;
+    position: absolute;
     top: 0;
-    right: -81% !important;
+    right: -80% !important;
     box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 3px 3px -2px, rgba(0, 0, 0, 0.2) 0px 1px 8px 0px;
     .posted{
         font-size: 12px;
@@ -81,19 +83,37 @@ select{
     }
 }
 
-@media (min-width: 768px){
+
+@media (max-width: 992px){
     .application-details{
         z-index: 1000;
-        position: fixed !important;
-        top: 0;
+        position: fixed ;
+        top: 3%;
         right: 0 !important;
         width:100% !important;
+        margin: auto;
         height: 100vh;
+        
+        header{
+            display: flex !important;
+        }
+    }
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); 
+        z-index: 999; 
     }
 }
 
-
-
+@media (max-width:576px) {
+    #noApp{
+        font-size: 14px !important;
+    }
+}
 
 .text{
     font-size: 14px ;
@@ -130,6 +150,13 @@ textarea,input{
 }
 .dialog1{
     &::backdrop{
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: $drowbackColor;
     }
 }
+
+
+.none{
+  display:none;
+}
+
+

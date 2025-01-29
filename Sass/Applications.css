@@ -64,8 +64,9 @@ select:focus {
 
 .application-details {
   z-index: 1000;
+  position: absolute;
   top: 0;
-  right: -81% !important;
+  right: -80% !important;
   box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 3px 3px -2px, rgba(0, 0, 0, 0.2) 0px 1px 8px 0px;
 }
 .application-details .posted {
@@ -73,14 +74,32 @@ select:focus {
   font-weight: 500;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 992px) {
   .application-details {
     z-index: 1000;
-    position: fixed !important;
-    top: 0;
+    position: fixed;
+    top: 3%;
     right: 0 !important;
     width: 100% !important;
+    margin: auto;
     height: 100vh;
+  }
+  .application-details header {
+    display: flex !important;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+}
+@media (max-width: 576px) {
+  #noApp {
+    font-size: 14px !important;
   }
 }
 .text {
@@ -120,4 +139,8 @@ textarea:focus, input:focus {
 
 .dialog1::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.none {
+  display: none;
 }/*# sourceMappingURL=Applications.css.map */
