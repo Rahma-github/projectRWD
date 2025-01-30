@@ -1,66 +1,55 @@
-:root{
-    --primarycolor: rgb(92, 149, 220);
-    --secondcolor: #1877F2;
+:root {
+  --primarycolor: rgb(92, 149, 220);
+  --secondcolor: #1877f2;
 }
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 150vh;
-            width: 100%;
-            margin: 0;
-            background-color: rgb(245, 245, 245);
-        }
-
-        .contactus_form {
-            padding: 30px;
-            border-radius: 15px;
-            width: 100%;
-        }
-        .form-select:focus{
-          outline: none;
-          box-shadow: none;
-          border: 2px solid rgb(9, 30, 221);
-
-      }
-        .form-control:focus{
-            outline: none;
-            box-shadow: none;
-            border: 2px solid rgb(9, 30, 221);
-
-        }
-        #submitbtn {
-            background-color:var(--primarycolor);
-        }
-       
-        
-        .facebook_icon_color i{
-            color:var(--secondcolor);
-        }
-        .twiter_icon_color i{
-            color:var(--primarycolor);
-        }
-        .linkdin_icon_color i{
-            color:var(--primarycolor);
-        }
-        
-        .youtube_icon_color i{
-            color: #FF0000;
-        }
-        .icons a {
-        font-size: 1.7rem; 
-    }
-    .icons a::after {
-    content: ""; 
+body {
+  background-color: rgb(245, 245, 245);
 }
-    .textstyle p{
-       color: white;
-    }
-    a {
-    text-decoration: none; 
-    
-  }
-  .textstyle a:hover {
-    text-decoration: underline; 
-  }
+
+.contactus_form {
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+}
+.form-select:focus {
+  outline: none;
+  box-shadow: none;
+  border: 2px solid rgb(9, 30, 221);
+}
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border: 2px solid rgb(9, 30, 221);
+}
+#submitbtn {
+  background-color: var(--primarycolor);
+}
+
+.facebook_icon_color i {
+  color: var(--secondcolor);
+}
+.twiter_icon_color i {
+  color: var(--primarycolor);
+}
+.linkdin_icon_color i {
+  color: var(--primarycolor);
+}
+
+.youtube_icon_color i {
+  color: #ff0000;
+}
+.icons a {
+  font-size: 1.7rem;
+}
+.icons a::after {
+  content: "";
+}
+.textstyle p {
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+.textstyle a:hover {
+  text-decoration: underline;
+}

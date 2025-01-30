@@ -1,50 +1,52 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
 }
 
 .fw-800 {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 .text-blue {
-    color: #0256d9;
+  color: #0256d9;
 }
 
 .bg-gradiant {
-    background-image: linear-gradient(to bottom, #0256d9 10%, #f7f7f7, #f7f7f7, #f7f7f7);
+  background-image: linear-gradient(
+    to bottom,
+    #0256d9 10%,
+    #f7f7f7,
+    #f7f7f7,
+    #f7f7f7
+  );
 }
-.body-con{
-    width: 75%;
+.body-con {
+  width: 75%;
 }
 
 .bg-none {
-    background-color: #0256d9;
-    border: none;
+  background-color: #0256d9;
+  border: none;
 }
 
 .s-group {
-    background-color: #f7f7f783;
-    color: #f7f7f7;
-    height: 65px;
-    font-weight: 700;
-    font-size: 20px;
+  background-color: #f7f7f783;
+  color: #f7f7f7;
+  height: 65px;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .s-group:hover {
-    background-color: #f7f7f7bf;
+  background-color: #f7f7f7bf;
 }
 
-
-.s-icon {}
-
 .s-npt {
-    background-color: #ffffff00;
-    border: none;
-    width: 100%;
-    color: red;
+  background-color: #ffffff00;
+  border: none;
+  width: 100%;
 }
 
 /* .s-npt:focus {
@@ -53,11 +55,11 @@
 } */
 
 .s-npt::placeholder {
-    /* color: #f7f7f7; */
+  /* color: #f7f7f7; */
 
-    color: var(--placeholder-color, #f7f7f7);
-    font-weight: 700;
-    padding: 5px;
+  color: var(--placeholder-color, #f7f7f7);
+  font-weight: 700;
+  padding: 5px;
 }
 
 /* .s-npt:focus::placeholder {
@@ -66,46 +68,42 @@
     outline: none;
 } */
 
-
-
 .opt-card {
-    border: #c3c3c3 1px solid;
+  border: #c3c3c3 1px solid;
 }
 
 .opt-card:hover {
-    border: #0256d9 1px solid;
+  border: #0256d9 1px solid;
 }
 
-.opt-card>div>div>h3,
-.opt-card>div>div>p {
-    font-size: 18px;
+.opt-card > div > div > h3,
+.opt-card > div > div > p {
+  font-size: 18px;
 }
 
 .fs-12 {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .topic {
-    /* margin: 15px; */
-    width: 45%;
+  /* margin: 15px; */
+  width: 45%;
 }
 
 .topic p {
-    margin: 0;
-
+  margin: 0;
 }
 
-
 .topic:hover {
-    background-color: #0254d916;
-    color: #0256d9;
+  background-color: #0254d916;
+  color: #0256d9;
 }
 
 @media screen and (max-width: 820px) {
-    .body-con{
-        width: 100% ;
-    }
-    .topic {
-        width: 100%;
-    }
+  .body-con {
+    width: 100%;
+  }
+  .topic {
+    width: 100%;
+  }
 }
