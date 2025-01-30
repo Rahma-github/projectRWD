@@ -120,4 +120,15 @@ function OnSubmitted(event){
         localStorage.setItem('user_contact_data', JSON.stringify(data));
     }
 }
+let menu =document.getElementById("menu");
+let dropmenu=document.getElementsByClassName("dropmenu")[0];
+menu.addEventListener("click",()=>{
+  dropmenu.classList.toggle("d-none")
+});
+
+document.addEventListener("click", (event) => {
+  if (!dropmenu.contains(event.target) && !menu.contains(event.target)) {
+      dropmenu.classList.add("d-none");
+  }
+});
 
