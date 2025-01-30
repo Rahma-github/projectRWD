@@ -53,3 +53,7 @@ a {
 .textstyle a:hover {
   text-decoration: underline;
 }
+
+.cursur{
+  cursor: pointer;
+}

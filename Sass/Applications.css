@@ -101,6 +101,9 @@ select:focus {
   #noApp {
     font-size: 14px !important;
   }
+  .sortBy {
+    font-size: 12px !important;
+  }
 }
 .text {
   font-size: 14px;
