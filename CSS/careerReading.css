@@ -1,56 +1,85 @@
+:root {
+  --primarycolor: rgb(92, 149, 220);
+  --secondcolor: #1877f2;
+}
+
 * {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
 }
+
+
 a {
   text-decoration: none !important;
 }
+
 .text-blue {
   color: #0256d9;
 }
+
 header {
-  background: no-repeat
-    url(https://blog.wuzzuf.net/wp-content/uploads/2023/05/8-the-benefits-of-offering-employee-referral-programs-1.jpg);
+  background: no-repeat url(https://blog.wuzzuf.net/wp-content/uploads/2023/05/8-the-benefits-of-offering-employee-referral-programs-1.jpg);
   background-size: cover;
 }
+
+.header-logo {
+  width: 200px;
+}
+
 .header-content {
   background: rgba(0, 0, 0, 0.51);
 }
+
 .fs-62 {
   font-size: 62px;
 }
+
 .fs-14 {
   font-size: 14px;
 }
+
 .fs-18 {
   font-size: 18px;
 }
+
+.fs-20 {
+  font-size: 20px;
+}
+
 .fs-22 {
   font-size: 22px;
 }
+
 .fw-600 {
   font-weight: 600;
 }
+
 .text-w {
   color: #fff;
 }
+
 .text-ww {
   color: #ffffffbe;
 }
+
 .w-70 {
   width: 65%;
 }
+
 .w-30 {
   width: 35%;
 }
+
 .w-48 {
   width: 45%;
 }
+
 .h-600 {
   height: 600px;
 }
+
 /* .left{
     width: 65%;
 }
@@ -64,17 +93,21 @@ header {
   border: none;
   font-size: 18px;
 }
+
 .blue-btn:hover {
   background-color: #0254d994;
 }
+
 .arc-card {
   width: 40%;
 }
+
 .line {
   background-color: #000000a5;
   width: 2px;
   align-self: stretch;
 }
+
 .logo {
   width: 200px;
 }
@@ -82,24 +115,53 @@ header {
 iframe {
   height: 600px;
 }
+.icons a {
+  font-size: 1.7rem;
+}
+.icons a::after {
+  content: "";
+}
+.icons i:hover{
+  opacity: .7;
 
+}
+.facebook_icon_color i {
+  color: var(--secondcolor);
+}
+.twiter_icon_color i {
+  color: #00aced;
+}
+.linkdin_icon_color i {
+  color: #007bb6;
+}
+
+.youtube_icon_color i {
+  color: #ff0000;
+}
 @media screen and (max-width: 768px) {
   iframe {
     height: 300px;
   }
+  .header-logo{
+    width: 150px;
+  }
 }
 
 @media screen and (max-width: 1018px) {
+
   .left,
   .right {
     width: 100%;
   }
-  .header-content > div {
+
+  .header-content>div {
     gap: 30px;
   }
+
   .arc-card {
     width: 100%;
   }
+
   .logo {
     width: 100%;
   }
